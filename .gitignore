@@ -1,0 +1,18 @@
+# Python virtual environment
+.venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Git remote repository
+origin

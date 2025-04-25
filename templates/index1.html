@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truck Selection - U.S Trucks</title>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            overflow-x: hidden;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo-img {
+            height: 80px;
+        }
+
+        .logo-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffcc00;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .caption {
+            font-size: 1.5rem;
+            color: #ddd;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .trucks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .truck {
+            width: 250px;
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.5s, box-shadow 0.3s;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .truck:hover {
+            transform: scale(1.1) rotateY(5deg);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .truck-info {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px 0;
+            font-weight: bold;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: rgba(0, 0, 0, 0.3);
+            width: 100%;
+            color: white;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="static/truck/logo.jpg" alt="U.S Trucks Logo" class="logo-img">
+        <div class="logo-text">U.S Trucks</div>
+    </div>
+    
+    <div class="caption">Select a Truck to Proceed with Booking</div>
+
+    <div class="trucks">
+        <div class="truck" style="background-image: url('static/truck/truck1.jpg');" onclick="bookTruck(1)">
+            <div class="truck-info">Truck 1</div>
+        </div>
+        <div class="truck" style="background-image: url('static/truck/truck2.jpg');" onclick="bookTruck(2)">
+            <div class="truck-info">Truck 2</div>
+        </div>
+        <div class="truck" style="background-image: url('static/truck/truck3.jpg');" onclick="bookTruck(3)">
+            <div class="truck-info">Truck 3</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>📞 Contact Us: <a href="tel:+18001234567">+1 800 123 4567</a> | 📧 Email: <a href="mailto:info@ustrucks.com">info@ustrucks.com</a></p>
+        <p>⭐ Reviews: "Great service, reliable trucks!" - John D. | "Best logistics experience!" - Sarah K.</p>
+        <p>© 2025 U.S Trucks. All rights reserved.</p>
+    </div>
+
+    <script>
+        function bookTruck(truckId) {
+    window.location.href = `/truck_details/${truckId}`;
+     }
+    </script>
+</body>
+</html>

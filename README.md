@@ -1,6 +1,9 @@
 # Truck Rental Management System
 
-A Flask-based web application for managing truck rentals.
+A Flask-based web application for managing truck rentals. "Made with AI".
+Tried to build something with ai.
+
+Access to this - web-production-5f8c2.up.railway.app
 
 ## Features
 - Truck listing and management
